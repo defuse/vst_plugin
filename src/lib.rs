@@ -81,7 +81,7 @@ impl PluginParameters for VstEffectParameters {
 
     fn get_parameter_text(&self, index: i32) -> String {
         match index {
-            0 => format!("{:.2}", (self.amplitude.get() - 0.5) * 2f32),
+            0 => format!("{:.2}", self.amplitude.get()),
             _ => "".to_string(),
         }
     }
